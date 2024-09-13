@@ -13,12 +13,14 @@
 # limitations under the License.
 
 import os
+
+from ament_index_python import get_package_share_directory
+from launch_ros.actions import Node
+from nav2_common.launch import ReplaceString
+
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, OpaqueFunction
-from launch_ros.actions import Node
 from launch.substitutions import EnvironmentVariable, LaunchConfiguration
-from nav2_common.launch import ReplaceString
-from ament_index_python import get_package_share_directory
 
 
 # The frame of the point cloud from ignition gazebo 6 isn't provided by <frame_id>.
@@ -27,14 +29,16 @@ def fix_depth_image_tf(context, *args, **kwargs):
     robot_namespace = LaunchConfiguration("robot_namespace").perform(context)
     device_namespace = LaunchConfiguration("device_namespace").perform(context)
 
-    if robot_namespace.startswith('/'):
+    if robot_namespace.startswith("/"):
         robot_namespace = robot_namespace[1:] + "/"
 
-    if device_namespace.startswith('/'):
+    if device_namespace.startswith("/"):
         device_namespace = device_namespace[1:]
 
     parent_frame = robot_namespace + device_namespace + "_center_optical_frame"
-    child_frame = "panther/base_link/" + robot_namespace + device_namespace + "_stereolabs_zed_depth"
+    child_frame = (
+        "panther/base_link/" + robot_namespace + device_namespace + "_stereolabs_zed_depth"
+    )
 
     static_transform_publisher = Node(
         package="tf2_ros",

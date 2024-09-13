@@ -29,10 +29,10 @@ def fix_depth_image_tf(context, *args, **kwargs):
     robot_namespace = LaunchConfiguration("robot_namespace").perform(context)
     device_namespace = LaunchConfiguration("device_namespace").perform(context)
 
-    if robot_namespace.startswith('/'):
+    if robot_namespace.startswith("/"):
         robot_namespace = robot_namespace[1:] + "/"
 
-    if device_namespace.startswith('/'):
+    if device_namespace.startswith("/"):
         device_namespace = device_namespace[1:]
 
     parent_frame = robot_namespace + device_namespace + "_depth_optical_frame"

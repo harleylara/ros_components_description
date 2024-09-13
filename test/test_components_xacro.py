@@ -49,7 +49,8 @@ components_types_with_names = {
     "MAN07": ["kinova_gen3_7dof", "base_link", "camera_color_frame", "camera_sensor"],
     # "GRP01": [], not implemented in robotiq_description
     "GRP02": ["robotiq", "robotiq_85_base_link", "", ""],
-    # "GRP03": ["robotiq", "robotiq_140_base_link", "", ""], not implemented in robotiq_description
+    # "GRP03": ["robotiq", "robotiq_140_base_link", "", ""], not implemented in robotiq_description,
+    "WCH01": ["wibotic_receiver", "wibotic_receiver_link", "", ""],
 }
 
 
