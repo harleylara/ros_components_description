@@ -144,7 +144,7 @@
 
         <topic>${ns}${device_ns}ouster/points</topic>
         <frame_id>${ns}${prefix}os_lidar</frame_id>
-        <ignition_frame_id>${ns}${prefix}os_lidar</ignition_frame_id>
+        <gz_frame_id>${ns}${prefix}os_lidar</gz_frame_id>
         <always_on>true</always_on>
       </sensor>
     </gazebo>

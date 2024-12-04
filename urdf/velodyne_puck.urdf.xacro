@@ -101,7 +101,7 @@
 
         <topic>${ns}${device_ns}velodyne_points</topic>
         <frame_id>${ns}${prefix}velodyne</frame_id>
-        <ignition_frame_id>${ns}${prefix}velodyne</ignition_frame_id>
+        <gz_frame_id>${ns}${prefix}velodyne</gz_frame_id>
         <always_on>true</always_on>
       </sensor>
     </gazebo>

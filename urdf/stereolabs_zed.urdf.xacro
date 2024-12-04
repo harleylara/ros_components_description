@@ -187,7 +187,7 @@
         <topic>${ns}${device_namespace}/zed_node/rgb/image_rect_color</topic>
         <visualize>false</visualize>
 
-        <ignition_frame_id>${device_namespace}_center_optical_frame</ignition_frame_id>
+        <gz_frame_id>${device_namespace}_center_optical_frame</gz_frame_id>
         <camera>
           <horizontal_fov>${110.0/180.0*pi}</horizontal_fov>
           <image>
@@ -209,7 +209,7 @@
         <topic>${ns}${device_namespace}/zed_node/depth</topic>
         <visualize>false</visualize>
 
-        <ignition_frame_id>${device_namespace}_center_optical_frame</ignition_frame_id>
+        <gz_frame_id>${device_namespace}_center_optical_frame</gz_frame_id>
         <camera>
           <horizontal_fov>${110.0/180.0*pi}</horizontal_fov>
           <image>

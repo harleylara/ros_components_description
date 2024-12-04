@@ -112,7 +112,7 @@
       <xacro:property name="dist_max" value="25.0" />
       <xacro:property name="dist_res" value="0.03" />
       <xacro:property name="std_dev" value="0.05" />
-      <xacro:property name="mesh" value="slamtec_rplidar_a3.dae" />
+      <xacro:property name="mesh" value="slamtec_rplidar_ax.dae" />
       <xacro:property name="collision">
         <origin xyz="0.0 0.0 ${0.041/2.0}" rpy="0.0 0.0 0.0" />
         <geometry>
@@ -245,7 +245,7 @@
         <visualize>false</visualize>
 
         <topic>${ns}${device_ns}scan</topic>
-        <ignition_frame_id>${ns}${prefix}laser</ignition_frame_id>
+        <gz_frame_id>${ns}${prefix}laser</gz_frame_id>
 
         <ray>
           <scan>

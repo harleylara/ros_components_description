@@ -61,7 +61,7 @@
         <always_on>1</always_on>
         <update_rate>1</update_rate>
         <topic>${ns}${device_namespace}/fix</topic>
-        <ignition_frame_id>${ns}${device_namespace}</ignition_frame_id>
+        <gz_frame_id>${ns}${device_namespace}</gz_frame_id>
       </sensor>
     </gazebo>
   </xacro:macro>
